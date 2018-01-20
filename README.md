@@ -3,7 +3,7 @@
 An implementation of View Pager with Fragments and Admob in Android Studio. 
 
 ### Preview : 
-![Preview](https://github.com/BharathVishal/ViewPagerwithFragmentsandAdmob/tree/master/Preview/PreviewGif.gif)
+![Preview](https://github.com/BharathVishal/ViewPagerwithFragmentsandAdmob/blob/master/Preview/PreviewGif.gif)
 
 
 ### Year developed : 
