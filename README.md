@@ -6,7 +6,8 @@ An implementation of View Pager with Fragments and Admob in Android Studio.
 ### Usage:
 1. Clone the project and sync gradle.
 2. Modify the code to suit your needs.
-3. Watchout for more features.
+3. Add admob test id in MainActivity.xml and add the Admoblistener in Mainactivity.Xml.
+4. Watchout for more features.
 
 
 
