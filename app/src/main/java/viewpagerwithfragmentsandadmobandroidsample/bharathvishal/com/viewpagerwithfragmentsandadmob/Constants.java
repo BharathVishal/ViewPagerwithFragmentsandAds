@@ -1,7 +1,7 @@
 package viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob;
 
 /**
- * Created by Vishal on 20-01-2018.
+ * Created by bharathvishal on 20/01/18.
  */
 
 public class Constants {

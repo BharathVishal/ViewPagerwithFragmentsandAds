@@ -9,15 +9,9 @@ import android.view.ViewGroup;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Created by bharathvishal on 20/01/18.
  */
 public class Fragment3 extends Fragment {
-
-
-    public Fragment3() {
-        // Required empty public constructor
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
