@@ -4,7 +4,9 @@ An implementation of View Pager with Fragments and Admob in Android Studio.
 
 
 ### Usage:
-1. Modify the code to suit your needs.
+1. Clone the project and sync gradle.
+2. Modify the code to suit your needs.
+3. Watchout for more features.
 
 
 
@@ -23,9 +25,7 @@ An implementation of View Pager with Fragments and Admob in Android Studio.
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 16 
-Target SDK : 27
-Gradle : 3.0.1
+Min SDK : 16  | Target SDK : 27 | Gradle : 3.0.1
 
 &nbsp;
 
