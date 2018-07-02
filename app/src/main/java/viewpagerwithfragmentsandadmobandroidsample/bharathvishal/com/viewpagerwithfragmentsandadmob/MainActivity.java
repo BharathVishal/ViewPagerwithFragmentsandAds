@@ -1,7 +1,9 @@
 package viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -18,11 +20,10 @@ import com.google.android.gms.ads.AdView;
 public class MainActivity extends AppCompatActivity {
     private AdView mAdView;
 
+    Context context;
+
     private ViewPager viewPager;
     private DrawerLayout drawer;
-
-    Integer[] colors = {Color.WHITE, Color.YELLOW, Color.BLUE, Color.GREEN, Color.GRAY};
-
 
     private String[] pageTitle = {"Fragment 1", "Fragment 2", "Fragment 3", "Fragment 4", "Fragment 5"};
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        context = this;
 
         viewPager = findViewById(R.id.view_pager);
         TabLayout tabLayout = findViewById(R.id.tab_layout);
@@ -63,19 +65,19 @@ public class MainActivity extends AppCompatActivity {
                 //For handling fragment background color change when tab is scrolled
                 switch (tab.getPosition()) {
                     case 0:
-                        viewPager.setBackgroundColor(colors[0]);
+                        viewPager.setBackgroundColor(ContextCompat.getColor(context, R.color.Fragment1));
                         break;
                     case 1:
-                        viewPager.setBackgroundColor(colors[1]);
+                        viewPager.setBackgroundColor(ContextCompat.getColor(context, R.color.Fragment2));
                         break;
                     case 2:
-                        viewPager.setBackgroundColor(colors[2]);
+                        viewPager.setBackgroundColor(ContextCompat.getColor(context, R.color.Fragment3));
                         break;
                     case 3:
-                        viewPager.setBackgroundColor(colors[3]);
+                        viewPager.setBackgroundColor(ContextCompat.getColor(context, R.color.Fragment4));
                         break;
                     case 4:
-                        viewPager.setBackgroundColor(colors[4]);
+                        viewPager.setBackgroundColor(ContextCompat.getColor(context, R.color.Fragment5));
                         break;
                 }
             }

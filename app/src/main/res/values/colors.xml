@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="Fragment1">#26A65B</color>
+    <color name="Fragment2">#763568</color>
+    <color name="Fragment3">#22A7F0</color>
+    <color name="Fragment4">#C93756</color>
+    <color name="Fragment5">#6C7A89</color>
+
 </resources>
