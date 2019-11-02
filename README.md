@@ -26,16 +26,16 @@ An implementation of View Pager with Fragments and Admob in Android Studio.
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 21  | Target SDK : 28 | Gradle : 3.3.0 | Java
+Min SDK : 21  | Target SDK : 29 | Gradle : 5.4.1 | Java
 
 &nbsp;
 
 
 ### Android Studio Version : 
-Android Studio 3.3
+Android Studio 3.5.1
 
 
 &nbsp;
 
-© 2018. Developed by Bharath Vishal G (https://github.com/BharathVishal).
+© 2018-2019. Developed by Bharath Vishal G (https://github.com/BharathVishal).
 Thank you. :smile:
