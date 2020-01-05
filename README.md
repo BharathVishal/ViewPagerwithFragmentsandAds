@@ -37,5 +37,5 @@ Android Studio 3.5.1
 
 &nbsp;
 
-© 2018-2019. Developed by Bharath Vishal G (https://github.com/BharathVishal).
+© 2018-2020. Developed by Bharath Vishal G (https://github.com/BharathVishal).
 Thank you. :smile:
