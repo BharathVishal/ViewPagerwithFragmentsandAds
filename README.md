@@ -32,7 +32,7 @@ Min SDK : 21  | Target SDK : 30 | Gradle : 6.5 | Java
 
 
 ### Android Studio Version : 
-Android Studio 4.1.1
+Android Studio 4.1.2
 
 
 &nbsp;
