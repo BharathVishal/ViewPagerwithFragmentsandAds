@@ -3,13 +3,20 @@ package viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerw
 import android.content.Context;
 
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.tabs.TabLayout;
+
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.widget.RelativeLayout;
 
 import com.google.android.gms.ads.AdView;
 
@@ -26,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private DrawerLayout drawer;
+    private RelativeLayout adContainerView;
+
 
     private String[] pageTitle = {"Fragment 1", "Fragment 2", "Fragment 3", "Fragment 4", "Fragment 5"};
 
@@ -37,10 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
         context = this;
 
-        MobileAds.initialize(context);
-        mAdView=findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        MobileAds.initialize(context, initializationStatus -> {
+        });
+        adContainerView = findViewById(R.id.bottomRelativeLayout);
+        mAdView = new AdView(this);
+
+        //Test Ad id, replace with your own ad id later
+        mAdView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+        adContainerView.addView(mAdView);
+        loadAdaptiveBanner();
 
         viewPager = findViewById(R.id.view_pager);
         TabLayout tabLayout = findViewById(R.id.tab_layout);
@@ -100,4 +114,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    private void loadAdaptiveBanner() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        AdSize adSize = getAdSize();
+        mAdView.setAdSize(adSize);
+        mAdView.loadAd(adRequest);
+    }
+
+
+    private AdSize getAdSize() {
+        Display display = getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+        float widthPixels = outMetrics.widthPixels;
+        float density = outMetrics.density;
+        int adWidth = (int) (widthPixels / density);
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+    }
+
+
 }
