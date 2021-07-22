@@ -1,22 +1,26 @@
 package viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by bharathvishal on 20/01/18.
  */
 
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+public class ViewPagerAdapter extends FragmentStateAdapter {
 
-    public ViewPagerAdapter(FragmentManager fm) {
-        super(fm);
+    public ViewPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
     }
 
+    @NotNull
     @Override
-
-    public Fragment getItem(int position) {
+    public Fragment createFragment(int position) {
         if (position == 0) {
             return new Fragment1();
         } else if (position == 1) {
@@ -31,7 +35,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
 
     @Override
-    public int getCount() {
+    public int getItemCount() {
         return Constants.VIEWPAGER_COUNT;
     }
 }
