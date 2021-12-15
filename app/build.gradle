@@ -8,20 +8,20 @@ android {
         minSdkVersion 21
         targetSdkVersion 31
         vectorDrawables.useSupportLibrary = true
-        versionCode 38
-        versionName "1.4"
+        versionCode 40
+        versionName "1.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             debuggable false
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             debuggable true
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -31,22 +31,13 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'com.google.android.gms:play-services-ads:20.4.0'
-    implementation 'com.google.firebase:firebase-analytics:20.0.0'
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.google.firebase:firebase-analytics:20.0.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.4.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation "androidx.viewpager2:viewpager2:1.0.0"
-    // For apps targeting Android 12, add WorkManager dependency.
-    constraints {
-        implementation('androidx.work:work-runtime:2.7.0') {
-            because '''androidx.work:work-runtime:2.1.0 pulled from
-      play-services-ads has a bug using PendingIntent without
-      FLAG_IMMUTABLE or FLAG_MUTABLE and will fail in Apps
-      targeting S+.'''
-        }
-    }
 }
 
 repositories {
