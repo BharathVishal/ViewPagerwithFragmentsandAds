@@ -8,8 +8,8 @@ android {
         minSdkVersion 23
         targetSdkVersion 33
         vectorDrawables.useSupportLibrary = true
-        versionCode 68
-        versionName "2.2"
+        versionCode 69
+        versionName "2.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -30,9 +30,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.android.gms:play-services-ads:21.0.0'
-    implementation 'com.google.android.material:material:1.7.0-alpha02'
-    implementation 'com.google.firebase:firebase-analytics:21.0.0'
+    implementation 'com.google.android.gms:play-services-ads:21.1.0'
+    implementation 'com.google.android.material:material:1.7.0-alpha03'
+    implementation 'com.google.firebase:firebase-analytics:21.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.4.0'
