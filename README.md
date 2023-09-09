@@ -25,13 +25,13 @@ An implementation of View Pager with Fragments and Admob in Android Studio.
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 34 | Gradle : 8.0.2 | Java
+Min SDK : 23  | Target SDK : 34 | Gradle : 8.1.1 | Java
 
 &nbsp;
 
 
 ### Android Studio Version : 
-Android Studio Flamingo | 2022.2.1 Patch 2
+Android Studio Giraffe | 2022.3.1 Patch 1
 
 
 &nbsp;
