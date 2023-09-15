@@ -1,6 +1,6 @@
-﻿# ViewPagerwithFragmentsandAdmob
+﻿# ViewPagerwithFragmentsandAds
 
-An implementation of View Pager with Fragments and Admob in Android Studio. 
+An implementation of View Pager with Fragments and Admob Banner Ad in Android Studio. 
 
 
 ### Usage:
@@ -13,7 +13,7 @@ An implementation of View Pager with Fragments and Admob in Android Studio.
 &nbsp;
 
 ### Preview : 
-![](https://github.com/BharathVishal/ViewPagerwithFragmentsandAdmob/blob/master/Preview/PreviewGif.gif)
+![](https://github.com/BharathVishal/ViewPagerwithFragmentsandAds/blob/master/Preview/PreviewGif.gif)
 
 
 &nbsp;
@@ -37,7 +37,7 @@ Android Studio Giraffe | 2022.3.1 Patch 1
 &nbsp;
 
 #### License : 
-[Apache License 2.0](https://github.com/BharathVishal/ViewPagerwithFragmentsandAdmob/blob/master/LICENSE)
+[Apache License 2.0](https://github.com/BharathVishal/ViewPagerwithFragmentsandAds/blob/master/LICENSE)
 &nbsp;
 
 &nbsp;
