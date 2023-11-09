@@ -25,13 +25,13 @@ An implementation of View Pager with Fragments and Admob Banner Ad in Android St
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 34 | Gradle : 8.1.1 | Java
+Min SDK : 23  | Target SDK : 34 | Gradle : 8.1.3 | Java
 
 &nbsp;
 
 
 ### Android Studio Version : 
-Android Studio Giraffe | 2022.3.1 Patch 1
+Android Studio Giraffe | 2022.3.1 Patch 3
 
 
 &nbsp;
