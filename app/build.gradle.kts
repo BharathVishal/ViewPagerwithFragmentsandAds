@@ -6,16 +6,16 @@ plugins {
 
 android {
     namespace="viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         applicationId ="viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob"
         vectorDrawables {
             useSupportLibrary = true
         }
         minSdk = 23
-        targetSdk = 34
-        versionCode = 101
-        versionName = "3.6"
+        targetSdk = 35
+        versionCode = 105
+        versionName = "3.7"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
