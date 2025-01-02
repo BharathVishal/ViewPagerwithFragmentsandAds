@@ -49,6 +49,6 @@ Android is a trademark of Google LLC.
 &nbsp;
 
 
-© 2018-2024. Developed by Bharath Vishal G (https://github.com/BharathVishal).
+© 2018-2025. Developed by Bharath Vishal G (https://github.com/BharathVishal).
 Thank you. :slightly_smiling_face:
 
