@@ -1,38 +1,48 @@
 /**
- *
  * Copyright 2018-2025 Bharath Vishal G.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
  **/
 
 package viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob;
 
+import static android.content.res.Configuration.UI_MODE_NIGHT_MASK;
+
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowInsets;
 import android.widget.RelativeLayout;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.color.DynamicColors;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -50,10 +60,64 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                EdgeToEdge.enable(this);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         context = this;
+
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                View viewTempAppBar = findViewById(R.id.appbarmain);
+
+                ViewCompat.setOnApplyWindowInsetsListener(viewTempAppBar, (v, windowInsets) -> {
+                    Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.statusBars());
+                    // Apply the insets as a margin to the view. This solution sets only the
+                    // bottom, left, and right dimensions, but you can apply whichever insets are
+                    // appropriate to your layout. You can also update the view padding if that's
+                    // more appropriate.
+                    ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+                    mlp.leftMargin = 0;
+                    mlp.bottomMargin = 0;
+                    mlp.topMargin = insets.top;
+                    mlp.rightMargin = 0;
+                    v.setLayoutParams(mlp);
+
+                    // Return CONSUMED if you don't want want the window insets to keep passing
+                    // down to descendant views.
+                    return WindowInsetsCompat.CONSUMED;
+                });
+
+                View tempL = findViewById(R.id.bottomRelativeLayout);
+                ViewCompat.setOnApplyWindowInsetsListener(tempL, (v, windowInsets) -> {
+                    Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemGestures());
+                    // Apply the insets as a margin to the view. This solution sets only the
+                    // bottom, left, and right dimensions, but you can apply whichever insets are
+                    // appropriate to your layout. You can also update the view padding if that's
+                    // more appropriate.
+                    ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+                    mlp.leftMargin = 0;
+                    mlp.bottomMargin = insets.bottom;
+                    mlp.topMargin = 0;
+                    mlp.rightMargin = 0;
+                    v.setLayoutParams(mlp);
+
+                    // Return CONSUMED if you don't want want the window insets to keep passing
+                    // down to descendant views.
+                    return WindowInsetsCompat.CONSUMED;
+                });
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         MobileAds.initialize(context, initializationStatus -> {
         });
@@ -80,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         //set viewpager adapter
         try {
-            ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),getLifecycle());
+            ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
             viewPager.setAdapter(pagerAdapter);
         } catch (Exception e) {
             e.printStackTrace();
@@ -142,6 +206,4 @@ public class MainActivity extends AppCompatActivity {
         int adWidth = (int) (widthPixels / density);
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
     }
-
-
 }
