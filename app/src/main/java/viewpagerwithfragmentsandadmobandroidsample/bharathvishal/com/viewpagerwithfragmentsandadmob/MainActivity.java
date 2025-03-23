@@ -16,8 +16,6 @@
 
 package viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob;
 
-import static android.content.res.Configuration.UI_MODE_NIGHT_MASK;
-
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,7 +23,6 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowInsets;
 import android.widget.RelativeLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -41,8 +38,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.color.DynamicColors;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
