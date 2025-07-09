@@ -25,7 +25,7 @@ An implementation of View Pager with Fragments and Admob Banner Ad in Android St
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 36 | Gradle : 8.9.0 | Java
+Min SDK : 23  | Target SDK : 36 | Gradle : 8.11.0 | Java
 
 &nbsp;
 
