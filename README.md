@@ -31,7 +31,7 @@ Min SDK : 23  | Target SDK : 36 | Gradle : 8.9.0 | Java
 
 
 ### Android Studio Version : 
-Android Studio Meerkat | 2024.3.1
+Android Studio Narwhal | 2025.1.1
 
 
 
