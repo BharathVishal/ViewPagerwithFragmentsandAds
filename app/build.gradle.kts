@@ -7,16 +7,16 @@ plugins {
 
 extensions.configure<ApplicationExtension> {
     namespace="viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob"
-    compileSdk = 36
+    compileSdk = 37
     defaultConfig {
         applicationId ="viewpagerwithfragmentsandadmobandroidsample.bharathvishal.com.viewpagerwithfragmentsandadmob"
         vectorDrawables {
             useSupportLibrary = true
         }
-        minSdk = 23
-        targetSdk = 36
-        versionCode = 125
-        versionName = "4.1"
+        minSdk = 24
+        targetSdk = 37
+        versionCode = 128
+        versionName = "4.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
